@@ -6,15 +6,15 @@
 
 template<typename T>
 class TPQueue {
-private:
+ private:
   std::list<T> data;
-  typename std::list<T>::iterator findPosition(const T& value) 
-    auto current = data.begin();  
+  typename std::list<T>::iterator findPosition(const T& value) {
+    auto current = data.begin();
     while (current != data.end() && current->prior >= value.prior) {
       ++current;
     }
     return current;
-  }
+  };
 
 public:
   TPQueue() = default;
