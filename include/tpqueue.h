@@ -14,9 +14,9 @@ class TPQueue {
       ++current;
     }
     return current;
-  };
+  }
 
-public:
+ public:
   TPQueue() = default;
   ~TPQueue() = default;
   void push(const T& value);
